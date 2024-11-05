@@ -1,0 +1,477 @@
+/* Общие стили для всего тела страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(270deg, #52021e, #000000); /* Темный градиентный фон */
+    background-size: 400% 400%;
+    animation: AnimationGradient 20s ease infinite;
+    color: #ddd; /* Светлый текст */
+    text-align: center;
+    padding: 50px 0;
+}
+
+@keyframes AnimationGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    background-color: transparent; /* Прозрачный фон */
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: -50px; /* Перемещаем шапку вверх */
+}
+
+/* Градиентные линии */
+.header-line {
+    height: 2px;
+    background: linear-gradient(to right, red, #e8e3db, red); /* Градиент от красного к основному цвету и обратно */
+    margin: 10px 0;
+}
+
+/* Стили для ссылок в шапке */
+header nav a {
+    color: #e0d3d5;
+    margin: 0 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #fff; /* Цвет при наведении */
+}
+
+/* Скрываем список империй по умолчанию */
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Фиксированное положение */
+    z-index: 1000; /* Выше всех остальных элементов */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+    background-color: #52021e; /* Фон содержимого окна */
+    margin: 15% auto; /* Отступ сверху и снизу */
+    padding: 20px;
+    border: 1px solid #ef5656;
+    width: 80%; /* Ширина содержимого */
+    max-width: 600px; /* Максимальная ширина */
+    border-radius: 10px;
+    color: #ddd;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-content ul li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Стили для изображения, растянутого на всю ширину */
+.image-container {
+    position: relative;
+    margin-top: -30px; /* Смещение вверх для перекрытия нижней линии шапки */
+    text-align: center;
+}
+
+.main-image {
+    width: 100vw; /* Растягиваем изображение на всю ширину экрана */
+    height: auto;
+    max-width: 100%; /* Обеспечиваем растяжение изображения */
+    border-radius: 0; /* Убираем скругленные углы для полного покрытия */
+    box-shadow: none; /* Убираем тень */
+}
+
+.centered-button {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #ef5656;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.centered-button:hover {
+    background-color: #e74c3c;
+}
+/* Секция иконок */
+.icons-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+/* Стили для рамок иконок с градиентом */
+.icon-box {
+    border: 2px solid; /* Устанавливаем рамку */
+    border-image: linear-gradient(to right, #ef5656, #d9cfc8, #ef5656) 1; /* Градиент для рамки */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.icon-box h3 {
+    margin: 15px 0;
+    color: #e7e2dc;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.icon-button {
+    background-color: #ef5656;
+    color: #eee9e9;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 14px;
+}
+
+.icon-button:hover {
+    background-color: #ef5656;
+    box-shadow: 0 0 12px rgba(239, 176, 116, 0.8);
+}
+
+/* Стилизация формы */
+form {
+    background: rgba(89, 34, 47, 0.25);/* Темный фон для формы */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ef5656; /* Рамка в цвет акцентов */
+}
+
+/* Контейнер для кнопки и гифки */
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Стили для кнопки */
+button {
+    background-color: #ef5656;
+    color: #fcf8f8;
+    border: none;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+button:hover {
+    background-color: #e5a068;
+    box-shadow: 0 0 12px rgba(239, 176, 116, 0.8);
+}
+
+/* Стили для гифки */
+.gif-image {
+    max-width: 100px;
+    height: auto;
+    position: absolute;
+    right: -120px; /* Сдвиг гифки вправо */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Стили для заголовков */
+h2 {
+    color: #d5d5d5;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Стили для полей ввода и меток */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #efb074;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    box-shadow: 0 0 8px rgba(239, 176, 116, 0.8);
+}
+
+
+
+
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width:431px) {
+    body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(270deg, #52021e, #000000); /* Темный градиентный фон */
+    background-size: 400% 400%;
+    animation: AnimationGradient 20s ease infinite;
+    color: #ddd; /* Светлый текст */
+    text-align: center;
+    padding: 50px 0;
+}
+
+    @keyframes AnimationGradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    header {
+        background-color: transparent; /* Прозрачный фон */
+        text-align: left;
+        margin-bottom: 30px;
+        margin-top: -60px; /* Перемещаем шапку вверх */
+    }
+
+    /* Градиентные линии */
+    .header-line {
+        height: 2px;
+        background: linear-gradient(to right, red, #e8e3db, red); /* Градиент от красного к основному цвету и обратно */
+        margin: 10px 0;
+    }
+
+    /* Стили для ссылок в шапке */
+    header nav a {
+        color: #e0d3d5;
+        margin: 0 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 10px;
+
+        transition: color 0.3s;
+    }
+
+    header nav a:hover {
+        color: #fff; /* Цвет при наведении */
+    }
+
+
+    /* Стили для изображения, растянутого на всю ширину */
+    .image-container {
+        position: relative;
+        margin-top: -30px; /* Смещение вверх для перекрытия нижней линии шапки */
+        text-align: center;
+    }
+
+    .main-image {
+        width: 100vw; /* Растягиваем изображение на всю ширину экрана */
+        height: auto;
+        max-width: 100%; /* Обеспечиваем растяжение изображения */
+        border-radius: 0; /* Убираем скругленные углы для полного покрытия */
+        box-shadow: none; /* Убираем тень */
+    }
+
+    .centered-button {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 5px 10px;
+        background-color: #ef5656;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .centered-button:hover {
+        background-color: #e74c3c;
+    }
+    /* Секция иконок */
+    .icons-section {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    /* Стили для рамок иконок с градиентом */
+    .icon-box {
+        border: 2px solid; /* Устанавливаем рамку */
+        border-image: linear-gradient(to right, #ef5656, #d9cfc8, #ef5656) 1; /* Градиент для рамки */
+        border-radius: 7px;
+        padding: 15px;
+        margin: 0 10px;
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    .icon-box h3 {
+        margin: 10px 0;
+        color: #e7e2dc;
+        font-size: 7px;
+        text-transform: uppercase;
+    }
+
+    .icon-button {
+        background-color: #ef5656;
+        color: #eee9e9;
+        border: none;
+        padding: 3px 6px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        font-size: 7px;
+    }
+
+    .icon-button:hover {
+        background-color: #ef5656;
+        box-shadow: 0 0 12px rgba(239, 176, 116, 0.8);
+    }
+
+    /* Стилизация формы */
+    form {
+        background: rgba(89, 34, 47, 0.25);/* Темный фон для формы */
+        padding: 10px;
+        border-radius: 10px;
+        width: 70%;
+        max-width: 390px;
+        margin: 5px auto;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        border: 1px solid #ef5656; /* Рамка в цвет акцентов */
+    }
+
+    /* Контейнер для кнопки и гифки */
+    .form-actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    /* Стили для кнопки */
+    button {
+        background-color: #ef5656;
+        color: #fcf8f8;
+        border: none;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        font-size: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    button:hover {
+        background-color: #e5a068;
+        box-shadow: 0 0 12px rgba(239, 176, 116, 0.8);
+    }
+
+    /* Стили для гифки */
+    .gif-image {
+        max-width: 10px;
+        height: auto;
+        position: relative;
+        right: -60px; /* Сдвиг гифки вправо */
+        top: 90%;
+        transform: translateY(-50%);
+    }
+
+    /* Стили для заголовков */
+    h2 {
+        color: #d5d5d5;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    /* Стили для полей ввода и меток */
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #ccc;
+        font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        width: calc(100% - 40px);
+        padding: 5px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        border: 1px solid #efb074;
+        outline: none;
+        font-size: 10px;
+        color: #333;
+        background-color: #fff;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    select:focus {
+        box-shadow: 0 0 8px rgba(239, 176, 116, 0.8);
+    }
+}

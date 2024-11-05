@@ -1,0 +1,94 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(270deg, #52021e, #000000); /* Темный градиентный фон */
+    background-size: 400% 400%;
+    animation: AnimationGradient 20s ease infinite;
+    color: #ddd; /* Светлый текст */
+    text-align: center;
+    padding: 50px 0;
+}
+
+@keyframes AnimationGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    background-color: transparent; /* Прозрачный фон */
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: -50px; /* Перемещаем шапку вверх */
+}
+
+/* Градиентные линии */
+.header-line {
+    height: 2px;
+    background: linear-gradient(to right, red, #e8e3db, red); /* Градиент от красного к основному цвету и обратно */
+    margin: 10px 0;
+}
+
+/* Стили для ссылок в шапке */
+header nav a {
+    color: #e0d3d5;
+    margin: 0 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #fff; /* Цвет при наведении */
+}
+/* Контейнер для FAQ */
+.faq-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Заголовок FAQ */
+h1 {
+    color: #ff3b3b;
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.4);
+}
+
+/* Блоки с вопросами и ответами */
+.faq-block {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid #ff3b3b;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.faq-block:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+}
+
+/* Вопрос */
+.faq-block h2 {
+    color: #ff3b3b;
+    font-size: 1.2em;
+    margin: 0;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* Ответ */
+.faq-block p {
+    color: #cccccc;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-top: 10px;
+    text-align: left;
+}
+
