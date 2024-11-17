@@ -299,7 +299,7 @@ select:focus {
     /* Стили для ссылок в шапке */
     header nav a {
         color: #e0d3d5;
-        margin: 0 30px;
+        margin: 0 15px;
         text-transform: uppercase;
         text-decoration: none;
         font-size: 10px;
